@@ -1,7 +1,5 @@
 import json
 from application import Application
-from status import Status
-from datetime import datetime
 
 
 def open_data(file_path):
@@ -16,8 +14,9 @@ class JSONBuilder:
 		self._data = open_data(file_path)
 
 	def add_application(self, application: Application):
-		self._data.append(application.get_attribute_map())
+		self._data.append(application.get_attribute_map_for_json())
+		self.__create_json()
 
-	def create_json(self):
+	def __create_json(self):
 		with open(self._file_path, "w") as json_file:
 			json.dump(self._data, json_file, indent=4)

@@ -1,5 +1,3 @@
-from datetime import date
-
 
 class Application:
 
@@ -24,7 +22,7 @@ class Application:
 	def set_status(self, new_status):
 		self._status = new_status
 
-	def get_attribute_map(self):
+	def get_attribute_map_for_json(self):
 		return {
 			"company": self._company,
 			"position": self._position,
