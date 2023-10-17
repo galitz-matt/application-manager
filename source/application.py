@@ -1,4 +1,4 @@
-from datetime import time
+from datetime import date
 
 
 class Application:
@@ -6,7 +6,7 @@ class Application:
 	def __init__(self, company, position, date, status):
 		self._company: str = company
 		self._position: str = position
-		self._date: time = date
+		self._date: date = date
 		self._status: status = status
 
 	def get_company(self):
@@ -15,7 +15,7 @@ class Application:
 	def get_position(self):
 		return self._position
 
-	def get_data(self):
+	def get_date(self):
 		return self._date
 
 	def get_status(self):
@@ -23,3 +23,11 @@ class Application:
 
 	def set_status(self, new_status):
 		self._status = new_status
+
+	def get_attribute_map(self):
+		return {
+			"company": self._company,
+			"position": self._position,
+			"date": self._date,
+			"status": self._status
+		}
