@@ -1,7 +1,7 @@
 
 class Application:
 
-	def __init__(self, company, position, date, status):
+	def __init__(self, company=None, position=None, date=None, status=None):
 		self._company: str = company
 		self._position: str = position
 		self._date: date = date

@@ -66,17 +66,16 @@ class GUI:
 
 	def __submit_application(self):
 		global json_builder
-		company = self.company_entry.get()
-		position = self.position_entry.get()
-		date = self.date_entry.get()
-		status = self.status_entry.get()
-		application_data = {
-			"Company": company,
-			"Position": position,
-			"Date": date,
-			"Status": status
-		}
-		json_builder.add_application(application_data)
+		application = Application()
+		application.set_company(self.company_entry.get())
+		application.set_position(self.position_entry.get())
+		application.set_date(self.date_entry.get())
+		application.set_status(self.status_entry.get())
+		json_builder.add_application(application)
+		self.company_entry.delete(0, tk.END)
+		self.position_entry.delete(0, tk.END)
+		self.date_entry.delete(0, tk.END)
+		self.status_entry.delete(0, tk.END)
 
 	def run(self):
 		self.root.mainloop()
