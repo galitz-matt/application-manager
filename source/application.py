@@ -1,10 +1,11 @@
 
 class Application:
 
-	def __init__(self, company=None, position=None, date=None, status=None):
+	def __init__(self, company=None, position=None, location=None, date=None, status=None):
 		self._company: str = company
 		self._position: str = position
-		self._date: date = date
+		self._location: str = location
+		self._date: str = date
 		self._status: status = status
 
 	def get_company(self):
@@ -12,6 +13,9 @@ class Application:
 
 	def get_position(self):
 		return self._position
+
+	def get_location(self):
+		return self._location
 
 	def get_date(self):
 		return self._date
@@ -25,6 +29,9 @@ class Application:
 	def set_position(self, position):
 		self._position = position
 
+	def set_location(self, location):
+		self._location = location
+
 	def set_date(self, date):
 		self._date = date
 
@@ -35,6 +42,7 @@ class Application:
 		return {
 			"company": self._company,
 			"position": self._position,
+			"location": self._location,
 			"date": self._date,
 			"status": self._status
 		}

@@ -34,6 +34,10 @@ class GUI:
 		self.position_entry = tk.Entry(self.application_frame)
 		self.position_entry.pack()
 
+		tk.Label(self.application_frame, text="Location:").pack()
+		self.position_entry = tk.Entry(self.application_frame)
+		self.position_entry.pack()
+
 		tk.Label(self.application_frame, text="Date:").pack()
 		self.date_entry = tk.Entry(self.application_frame)
 		self.date_entry.pack()
@@ -53,6 +57,7 @@ class GUI:
 		self.application_frame = None
 		self.company_entry = None
 		self.position_entry = None
+		self.location_entry = None
 		self.date_entry = None
 		self.status_entry = None
 		self.go_back_button = None
@@ -70,11 +75,13 @@ class GUI:
 		application = Application()
 		application.set_company(self.company_entry.get())
 		application.set_position(self.position_entry.get())
+		application.set_location(self.location_entry.get())
 		application.set_date(self.date_entry.get())
 		application.set_status(self.status_entry.get())
 		json_builder.add_application(application)
 		self.company_entry.delete(0, tk.END)
 		self.position_entry.delete(0, tk.END)
+		self.location_entry.delete(0, tk.END)
 		self.date_entry.delete(0, tk.END)
 		self.status_entry.delete(0, tk.END)
 
