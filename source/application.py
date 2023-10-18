@@ -19,8 +19,17 @@ class Application:
 	def get_status(self):
 		return self._status
 
-	def set_status(self, new_status):
-		self._status = new_status
+	def set_company(self, company):
+		self._company = company
+
+	def set_position(self, position):
+		self._position = position
+
+	def set_date(self, date):
+		self._date = date
+
+	def set_status(self, status):
+		self._status = status
 
 	def get_attribute_map_for_json(self):
 		return {
