@@ -1,8 +1,9 @@
 import tkinter as tk
+import sys
 from json_builder import JSONBuilder
 from application import Application
 
-json_builder = JSONBuilder("../resources/applications.json")
+json_builder = JSONBuilder(sys.argv[1])
 
 
 class GUI:
