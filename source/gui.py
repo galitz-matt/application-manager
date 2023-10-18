@@ -35,8 +35,8 @@ class GUI:
 		self.position_entry.pack()
 
 		tk.Label(self.application_frame, text="Location:").pack()
-		self.position_entry = tk.Entry(self.application_frame)
-		self.position_entry.pack()
+		self.location_entry = tk.Entry(self.application_frame)
+		self.location_entry.pack()
 
 		tk.Label(self.application_frame, text="Date:").pack()
 		self.date_entry = tk.Entry(self.application_frame)
