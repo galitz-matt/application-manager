@@ -2,13 +2,29 @@
     {
         "company": "Veeco",
         "position": "SDE Intern",
+        "location": "Somerset, NJ",
         "date": "10/18/2023",
         "status": "IP"
     },
     {
         "company": "GM Financial",
         "position": "SDE Intern",
+        "location": "Irving, TX",
         "date": "10/18/2023",
+        "status": "Rejected"
+    },
+    {
+        "company": "ASML",
+        "position": "Software Quality Assurance Intern",
+        "location": "San Jose, CA",
+        "date": "10/18/2023",
+        "status": "IP"
+    },
+    {
+        "company": "Dropbox",
+        "position": "Data Science Intern",
+        "location": "Remote",
+        "date": "10/19/2023",
         "status": "IP"
     }
 ]

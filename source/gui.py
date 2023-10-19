@@ -14,7 +14,6 @@ class GUI:
 		self.__initialize_ui()
 
 	def __initialize_ui(self):
-		self.__initialize_variables()
 		self.__create_home_page()
 		self.__create_application_form()
 
@@ -51,16 +50,6 @@ class GUI:
 
 		self.enter_button = tk.Button(self.application_frame, text="Enter", command=self.__submit_application)
 		self.enter_button.pack()
-
-	def __initialize_variables(self):
-		self.add_app_button = None
-		self.application_frame = None
-		self.company_entry = None
-		self.position_entry = None
-		self.location_entry = None
-		self.date_entry = None
-		self.status_entry = None
-		self.go_back_button = None
 
 	def __show_application_form(self):
 		self.add_app_button.pack_forget()
